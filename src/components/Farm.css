@@ -1,0 +1,30 @@
+.one
+{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width:30%;
+
+    background-color:limegreen;    
+    float: left;  
+}
+.two
+{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width:30%;
+
+    background-color:orange;
+    float: left;
+}
