@@ -1,16 +1,18 @@
 import React,{Component} from 'react';
-import { NavLink } from 'react-router-dom';
-import {Navbar, Nav} from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-export class Navigation extends Component {
-    render(){
-        return(
-            <Navbar>
-                <NavLink to='/'>Home</NavLink>
-                <NavLink to='/login'>Login</NavLink>
-                <NavLink to='/register'>Register</NavLink>
-                <NavLink to='/farm'>Farm</NavLink>
-            </Navbar>
-        )
-    }
+export default function Navigation() {
+    return(
+        <Navbar bg="dark" variant="dark">
+            <Container>
+                <Navbar.Brand href="/">Home</Navbar.Brand>
+                <Nav className="me-auto">
+                    <Nav.Link href="/account-details">Account details</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+    )
+    
 } 
