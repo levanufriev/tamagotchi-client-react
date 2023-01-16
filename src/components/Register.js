@@ -19,14 +19,17 @@ export default function Register() {
     })
 
     function validate() {
-        console.log("validate")
+        if (data.imageFile == null) {
+            alert("Choose avatar.")
+            return false
+        }        
         if (data.firstName == "" || data.lastName == "" 
             || data.email == "" || data.password == "" 
             || data.confirmPassword == "") {
             alert("All fields must be filled.")
             return false
         }
-        else if (data.confirmPassword != data.password) {
+        if (data.confirmPassword != data.password) {
             alert("Confirm password again.")
             return false
         }
@@ -120,7 +123,7 @@ export default function Register() {
                 <Form.Label>Confirm password</Form.Label>
                 <Form.Control type="password" placeholder="Confirm password" onChange={(e) => handle(e)} id="confirmPassword"value={data.confirmPassword}/>
             </Form.Group>
-            <Button href="/login" variant="primary" type="submit">
+            <Button variant="primary" type="submit">
                 Submit
             </Button>
         </Form>

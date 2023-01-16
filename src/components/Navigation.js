@@ -10,6 +10,8 @@ export default function Navigation() {
                 <Navbar.Brand href="/">Home</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/account-details">Account details</Nav.Link>
+                    <Nav.Link href="/farms-overview">Farms overview</Nav.Link>
+                    <Nav.Link href="/farm-details">Farm details</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
