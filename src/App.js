@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+import {Home} from './components/Home'
+import Navigation from './components/Navigation'
+import Login from './components/Login'
+import Register from './components/Register'
+import FarmsOverview from './components/FarmsOverview'
+import AccountDetails from './components/AccountDetails'
+import FarmDetails from './components/FarmDetails'
+import Pet from './components/Pet'
+
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navigation/>
+      <div className="container">
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>         
+          <Route path='/account-details' element={<AccountDetails/>}/>
+          <Route path='/farms-overview' element={<FarmsOverview/>}/>
+          <Route path='/farm-details' element={<FarmDetails/>}/>
+          <Route path='/pets' element={<Pet/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
